@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <th>Product Name</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <% products.forEach(product => { %>
+  <tbody>
+    <tr>
+      <td data-column="Product Name"><%= product.name %></td>
+      <td data-column="Category"><%= product.category %></td>
+    </tr>
+  </tbody>
+  <% }) %>
+</table>
