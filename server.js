@@ -1,7 +1,7 @@
 import express from "express";
 import db from "./config/db.js";
 import expressLayouts from "express-ejs-layouts";
-import productRouter from "./routes/product.router.js";
+import studentRouter from "./routes/student.router.js";
 
 import path from "path";
 import { fileURLToPath } from "url";
@@ -32,7 +32,7 @@ db.sync()
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
-app.use("/products", productRouter);
+app.use("/students", studentRouter);
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });

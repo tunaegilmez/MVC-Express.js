@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <th>Students</th>
+      <th>Numbers</th>
+    </tr>
+  </thead>
+  <% students.forEach(student => { %>
+  <tbody>
+    <tr>
+      <td data-column="Student Name"><%= student.name %></td>
+      <td data-column="Number"><%= student.number %></td>
+    </tr>
+  </tbody>
+  <% }) %>
+</table>

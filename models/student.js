@@ -1,21 +1,21 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../config/db.js";
 
-const Product = sequelize.define(
-  "products",
+const Student = sequelize.define(
+  "students",
   {
-    name: {
+    student_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    category: {
-      type: DataTypes.STRING,
+    student_number: {
+      type: DataTypes.NUMBER,
       allowNull: false,
     },
-    createdAt: {
+    created_on: {
       type: DataTypes.DATE,
     },
-    updatedAt: {
+    updated_on: {
       type: DataTypes.DATE,
     },
   },
@@ -35,4 +35,4 @@ const Product = sequelize.define(
   }
 })();
 
-export default Product;
+export default Student;
