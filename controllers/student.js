@@ -6,7 +6,6 @@ const getStudents = async (req, res) => {
 
     res.render("./students/index.ejs", { students });
   } catch (error) {
-    console.error(error);
     res.status(500).json({ message: error.message });
   }
 };

@@ -12,7 +12,7 @@ router.get("/new", Controller.getForm);
 router.post(
   "/new",
   body(["name", "number"]).exists(),
-  validator,
+  // validator,
   Controller.addStudent
 );
 

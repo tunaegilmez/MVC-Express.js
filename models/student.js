@@ -4,19 +4,21 @@ import sequelize from "../config/db.js";
 const Student = sequelize.define(
   "students",
   {
-    student_name: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    student_number: {
-      type: DataTypes.NUMBER,
+    number: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
-    created_on: {
+    createdAt: {
       type: DataTypes.DATE,
+      allowNull: false,
     },
-    updated_on: {
+    updatedAt: {
       type: DataTypes.DATE,
+      allowNull: false,
     },
   },
   {
@@ -28,7 +30,7 @@ const Student = sequelize.define(
   try {
     await sequelize.authenticate();
     console.log("Database connection successful!");
-    await sequelize.sync();
+    await sequelize.sync({ alter: true });
     console.log("Tables synchronized!");
   } catch (error) {
     console.error("Database connection or synchronization error:", error);
